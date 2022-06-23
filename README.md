@@ -1,5 +1,5 @@
 # lovelace-xiaomi-purifier
-Xiaomi Purifier lovelace card with css animation
+Xiaomi Purifier lovelace card with css animation. Fits the entity formats for [Xiaomi Miot Auto](https://github.com/al-one/hass-xiaomi-miot) intergration.
 
 ## Extra Features
 1. compact view to show temperature and humidity 
