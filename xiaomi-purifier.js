@@ -46,14 +46,14 @@ class XiaomiPurifier extends HTMLElement {
     const div = document.createElement('ha-card');
     div.className = 'ha-air-filter-panel off'
     div.innerHTML = `
-            // <div class="card-header">
-            //     <a class="name">
-            //         <ha-icon icon="mdi:air-filter"></ha-icon>
-            //         <span class="title">空气净化器</span>
-            //     </a>
-            //     <paper-icon-button id="buzzer" icon="mdi:volume-low" style="margin-top:-8px;"></paper-icon-button>
-            //     <paper-icon-button id="more" icon="mdi:menu" style="margin-top:-8px;"></paper-icon-button>
-            // </div>
+            <!--<div class="card-header">
+                <a class="name">
+                    <ha-icon icon="mdi:air-filter"></ha-icon>
+                    <span class="title">空气净化器</span>
+                </a>
+                <paper-icon-button id="buzzer" icon="mdi:volume-low" style="margin-top:-8px;"></paper-icon-button>
+                <paper-icon-button id="more" icon="mdi:menu" style="margin-top:-8px;"></paper-icon-button>
+            </div> -->
             <div class="duang">
             <div class="body">
                 <div class="content">
@@ -143,11 +143,11 @@ class XiaomiPurifier extends HTMLElement {
 
             .content{width:240px;height:240px;position:absolute;border-radius: 50%;margin-top:10px;z-index:1;text-align: center;}
             .content p{padding:0;margin:0;}
-            .content p:nth-child(1){padding-top: 50px;font-size:12px;color:#ddd;}
-            .content p:nth-child(1).advanced{padding-top: 70px !important;}
-            .content p:nth-child(2){font-size:80px;color:white; /*margin: 40px 0;*/ line-height: 90px;}
+            .content p:nth-child(1){padding-top: 30px;font-size:12px;color:#ddd;}
+            .content p:nth-child(1).advanced{padding-top: 50px !important;}
+            .content p:nth-child(2){font-size:70px;color:white; /*margin: 40px 0;*/ line-height: 90px;}
             .content p:nth-child(3){color:#eee;}
-            .content p:nth-child(4) {padding-top: 30px;}
+            .content p:nth-child(4) {padding-top: 20px;}
             .content p:nth-child(4) span{color: white; }
             .content p:nth-child(4) span b{font-weight: normal;font-size: 2em; padding:0 3px;}
             .content p:nth-child(4) span ha-icon{margin-top: -10px; color: rgba(255,255,255,0.7);}
@@ -158,7 +158,7 @@ class XiaomiPurifier extends HTMLElement {
             .tmp-body{display:flex;padding:30px 0;}
             .tmp-body div{flex:1;}
             .tmp-body div span:not([data-title]){font-size:40px;}
-            .tmp-body div p{margin:0;font-size:12px;color:gray;}
+            .tmp-body div p{margin:0;font-size:10px;color:gray;}
             .tmp-body div:nth-child(1){text-align:right;border-right:1px solid silver;padding-right:20px;}
             .tmp-body div:nth-child(2){padding-left:20px;}
             .footer{display:flex;}
