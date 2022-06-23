@@ -46,14 +46,15 @@ class XiaomiPurifier extends HTMLElement {
     const div = document.createElement('ha-card');
     div.className = 'ha-air-filter-panel off'
     div.innerHTML = `
-            <!--<div class="card-header">
+
+            <div class="card-header">
                 <a class="name">
                     <ha-icon icon="mdi:air-filter"></ha-icon>
                     <span class="title">空气净化器</span>
                 </a>
                 <paper-icon-button id="buzzer" icon="mdi:volume-low" style="margin-top:-8px;"></paper-icon-button>
                 <paper-icon-button id="more" icon="mdi:menu" style="margin-top:-8px;"></paper-icon-button>
-            </div> -->
+            </div>
             <div class="duang">
             <div class="body">
                 <div class="content">
@@ -107,27 +108,28 @@ class XiaomiPurifier extends HTMLElement {
 
     const style = document.createElement('style')
     style.textContent = `
+
             .ha-air-filter-panel{overflow:hidden;}
             .card-header{display:flex;justify-content: space-between;}
             .card-header .name{cursor: pointer;text-decoration: none;flex-grow: 1;}
+
             .content-bg{
-              height: 250px;
-              width: 250px;
+              height: 300px;
+              width: 300px;
               border-radius: 50%;}
-            .content-bg div{position:absolute;height: 260px;width: 240px;border-radius: 50%;}
+            .content-bg div{position:absolute;height: 310px;width: 290px;border-radius: 50%;}
             .content-bg div:nth-child(1){
               transform: rotate(0deg);
               animation: a1 5s linear 2s infinite alternate;
             }
             .content-bg div:nth-child(2){
-              transform: rotate(60deg);
-              animation: a2 4s linear 1s infinite alternate;
+            transform: rotate(60deg);
+            animation: a2 4s linear 1s infinite alternate;
             }
             .content-bg div:nth-child(3){
-              transform: rotate(120deg);
-              animation: a3 3s linear 1s infinite alternate;
+            transform: rotate(120deg);
+            animation: a3 3s linear 1s infinite alternate;
             }
-
             @keyframes a1{
               from {transform: rotate(0deg);}
               to {transform: rotate(360deg);}
@@ -141,24 +143,23 @@ class XiaomiPurifier extends HTMLElement {
               to {transform: rotate(240deg);}
             }
 
-            .content{width:240px;height:240px;position:absolute;border-radius: 50%;margin-top:10px;z-index:1;text-align: center;}
+            .content{width:290px;height:290px;position:absolute;border-radius: 50%;margin-top:10px;z-index:1;text-align: center;}
             .content p{padding:0;margin:0;}
-            .content p:nth-child(1){padding-top: 30px;font-size:12px;color:#ddd;}
-            .content p:nth-child(1).advanced{padding-top: 50px !important;}
-            .content p:nth-child(2){font-size:70px;color:white; /*margin: 40px 0;*/ line-height: 90px;}
+            .content p:nth-child(1){padding-top: 50px;font-size:12px;color:#ddd;}
+            .content p:nth-child(1).advanced{padding-top: 70px !important;}
+            .content p:nth-child(2){font-size:80px;color:white; /*margin: 40px 0;*/ line-height: 90px;}
             .content p:nth-child(3){color:#eee;}
-            .content p:nth-child(4) {padding-top: 20px;}
+            .content p:nth-child(4) {padding-top: 30px;}
             .content p:nth-child(4) span{color: white; }
             .content p:nth-child(4) span b{font-weight: normal;font-size: 2em; padding:0 3px;}
             .content p:nth-child(4) span ha-icon{margin-top: -10px; color: rgba(255,255,255,0.7);}
             .content p:nth-child(4) span:first-of-type{margin-right:10px;}
             .content p:nth-child(4) span:last-of-type{margin-left:10px;}
-
-            .body{width: 250px;margin: 0 auto;}
+            .body{width: 300px;margin: 0 auto;}
             .tmp-body{display:flex;padding:30px 0;}
             .tmp-body div{flex:1;}
             .tmp-body div span:not([data-title]){font-size:40px;}
-            .tmp-body div p{margin:0;font-size:10px;color:gray;}
+            .tmp-body div p{margin:0;font-size:12px;color:gray;}
             .tmp-body div:nth-child(1){text-align:right;border-right:1px solid silver;padding-right:20px;}
             .tmp-body div:nth-child(2){padding-left:20px;}
             .footer{display:flex;}
@@ -170,10 +171,7 @@ class XiaomiPurifier extends HTMLElement {
             .footer div.favorite-level div{padding:10px; }
             .footer div.favorite-level input[type="range"] {width: 100%;  margin-top:20px;}
             .footer div.favorite-level .icon-button {float: right; width: 26px; height: 26px; display: block; cursor: pointer;border:none;padding:initial;}
-
             .hide{display: none;}
-
-
             /**开机**/
             .on .content-bg div{background: rgba(1,182,165,.1);}
             .on .content{background:#01b6a5;  overflow:hidde;}
@@ -191,7 +189,6 @@ class XiaomiPurifier extends HTMLElement {
             .on .level-4{background-color:blue;}
             .on .level-5{background-color:red;}
             .on .level-6{background-color:red;}
-
             /**关机**/
             .off .content-bg div{background: rgba(0,0,0,.1);}
             .off .content{background:#607d8b;overflow:hidden;}
